@@ -26,3 +26,6 @@ THEN I am again presented with current and future conditions for that city
 Also additional Criteria.
 Use local data to secure persistent data
 use OpenWeatherAPI
+
+Deployed Site!
+https://gerryraldo.github.io/GerrysWeatherApp/

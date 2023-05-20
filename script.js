@@ -59,7 +59,7 @@ function getApi(event) {
     //let zip = 38305;
     
     fetch(
-        `http://api.openweathermap.org/geo/1.0/zip?zip=${zip},US&appid=${APIKey}`
+        `https://api.openweathermap.org/geo/1.0/zip?zip=${zip},US&appid=${APIKey}`
     )
         .then(function(response) {
             return response.json();

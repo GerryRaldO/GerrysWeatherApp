@@ -6,73 +6,79 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <title>Gerry's Weather App</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+        crossorigin="anonymous"
+    ></script>
 </head>
 
 <body>
     <header class="page-header border bg-primary-subtle d-flex justify-content-center p-2 ">
-        <h1>Weather Dashboard</h1>
+        <h4>Weather Dashboard</h4>
     </header>
     <main>
         <div class="container">
             <div class="row ">
-                <div class="col-3 d-flex justify-content-center ">
+                <div class="col-2 d-flex justify-content-center ">
                     <div>
-                        <h1>Search For a City</h1>
-                        <input type="text" name="SearchedCityName" id="SearchedCityName">
+                        <h4>Search For a City by Zip</h4>
+                        <input type="text" name="SearchedCityName" id="SearchedCityZip">
                         <form>
                             <ul>
-                                <button>City</button>
+                                <button id="searchButton">City</button>
                             </ul>
                         </form>
                         
                     </div>
                 </div>
 
-                <div class="col-9 d-flex justify-content-center">
+                <div class="col-10 d-flex justify-content-center">
                     <div class="container">
                         <div class="row">
                             <div >
-                                <h1>City Name, Date Icon</h1>
-                                <h2>Temp:</h2>
-                                <h2>Wind:</h2>
-                                <h2>Humidity:</h2>
+                                <h4 id="CityNameDateIcon">City Name, Date Icon</h4>
+                                <h4 id="temp">Temp:</h4>
+                                <h4 id="wind">Wind:</h4>
+                                <h4 id="humidity">Humidity:</h4>
                             </div>
                             <div class="container">
                                 <div class="row">
                                     <div id = "dayOne" class="col m-1 p-1">
-                                        <h2 id="dayOneDate">Date+1</h2>
-                                        <h2 id="dayOneIcon">Icon</h2>
-                                        <h2 id="dayOneTemp">Temp:</h2>
-                                        <h2 id="dayOneWind">Wind</h2>
-                                        <h2 id="dayOneHumidity">Humidity</h2>
+                                        <h4 id="dayOneDate">Date+1</h4>
+                                        <h4 id="dayOneIcon">Icon</h4>
+                                        <h4 id="dayOneTemp">Temp:</h4>
+                                        <h4 id="dayOneWind">Wind</h4>
+                                        <h4 id="dayOneHumidity">Humidity</h4>
                                     </div>
                                     <div id = "dayTwo" class="col m-1 p-1">
-                                        <h2 id="dayTwoDate">Date+1</h2>
-                                        <h2 id="dayTwoIcon">Icon</h2>
-                                        <h2 id="dayTwoTemp">Temp:</h2>
-                                        <h2 id="dayTwoWind">Wind</h2>
-                                        <h2 id="dayTwoHumidity">Humidity</h2>
+                                        <h4 id="dayTwoDate">Date+1</h4>
+                                        <h4 id="dayTwoIcon">Icon</h4>
+                                        <h4 id="dayTwoTemp">Temp:</h4>
+                                        <h4 id="dayTwoWind">Wind</h4>
+                                        <h4 id="dayTwoHumidity">Humidity</h4>
                                     </div>
                                     <div id = "dayThree" class="col m-1 p-1">
-                                        <h2 id="dayThreeDate">Date+1</h2>
-                                        <h2 id="dayThreeIcon">Icon</h2>
-                                        <h2 id="dayThreeTemp">Temp:</h2>
-                                        <h2 id="dayThreeWind">Wind</h2>
-                                        <h2 id="dayThreeHumidity">Humidity</h2>
+                                        <h4 id="dayThreeDate">Date+1</h4>
+                                        <h4 id="dayThreeIcon">Icon</h4>
+                                        <h4 id="dayThreeTemp">Temp:</h4>
+                                        <h4 id="dayThreeWind">Wind</h4>
+                                        <h4 id="dayThreeHumidity">Humidity</h4>
                                     </div>
                                     <div id = "dayFour" class="col m-1 p-1">
-                                        <h2 id="dayFourDate">Date+1</h2>
-                                        <h2 id="dayFourIcon">Icon</h2>
-                                        <h2 id="dayFourTemp">Temp:</h2>
-                                        <h2 id="dayFourWind">Wind</h2>
-                                        <h2 id="dayFourHumidity">Humidity</h2>
+                                        <h4 id="dayFourDate">Date+1</h4>
+                                        <h4 id="dayFourIcon">Icon</h4>
+                                        <h4 id="dayFourTemp">Temp:</h4>
+                                        <h4 id="dayFourWind">Wind</h4>
+                                        <h4 id="dayFourHumidity">Humidity</h4>
                                     </div>
                                     <div id = "dayFive" class="col m-1 p-1">
-                                        <h2 id="dayFiveDate">Date+1</h2>
-                                        <h2 id="dayFiveIcon">Icon</h2>
-                                        <h2 id="dayFiveTemp">Temp:</h2>
-                                        <h2 id="dayFiveWind">Wind</h2>
-                                        <h2 id="dayFiveHumidity">Humidity</h2>
+                                        <h4 id="dayFiveDate">Date+1</h4>
+                                        <h4 id="dayFiveIcon">Icon</h4>
+                                        <h4 id="dayFiveTemp">Temp:</h4>
+                                        <h4 id="dayFiveWind">Wind</h4>
+                                        <h4 id="dayFiveHumidity">Humidity</h4>
                                     </div>
                                 </div>
                             </div>
@@ -86,4 +92,5 @@
 
         </div>
     </main>
+    <script src="./script.js"></script>
 </body>
